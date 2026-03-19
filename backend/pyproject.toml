@@ -1,0 +1,13 @@
+[project]
+name = "art-gallery-backend"
+version = "0.1.0"
+description = "Art Gallery Management System backend"
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "psycopg2-binary>=2.9.9",
+    "faker>=24.0.0",
+    "python-dotenv>=1.0.0",
+]

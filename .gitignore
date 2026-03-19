@@ -1,0 +1,34 @@
+# Database volume
+postgres_data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# UV
+.uv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Zone identifiers (Windows WSL artifacts)
+*:Zone.Identifier

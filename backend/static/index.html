@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery — Visitor</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<nav>
+  <a class="brand" href="/index.html">🖼 Meridian Gallery</a>
+  <a href="/index.html">Browse</a>
+  <a href="/staff.html">Staff</a>
+  <a href="/management.html">Management</a>
+</nav>
+
+<div id="toast-container"></div>
+
+<div class="page">
+  <!-- Gallery hero -->
+  <div class="gallery-hero" id="gallery-hero">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Summary stats -->
+  <div class="stat-grid" id="stats-grid"></div>
+
+  <!-- Artwork browsing -->
+  <h2 class="section-title">Browse Artwork</h2>
+
+  <div class="filter-bar">
+    <label>Style
+      <select id="filter-style">
+        <option value="">All Styles</option>
+      </select>
+    </label>
+    <label>Min Price ($)
+      <input type="number" id="filter-min" placeholder="0" min="0">
+    </label>
+    <label>Max Price ($)
+      <input type="number" id="filter-max" placeholder="Any" min="0">
+    </label>
+    <label>Availability
+      <select id="filter-sold">
+        <option value="">All</option>
+        <option value="false">Available</option>
+        <option value="true">Sold</option>
+      </select>
+    </label>
+    <label style="justify-content:flex-end">
+      <button class="btn btn-primary" onclick="loadArtwork(1)">Apply</button>
+    </label>
+    <label style="justify-content:flex-end">
+      <button class="btn btn-secondary" onclick="clearFilters()">Clear</button>
+    </label>
+  </div>
+
+  <div id="artwork-grid" class="artwork-grid"></div>
+  <div class="pagination" id="artwork-pagination"></div>
+
+  <!-- Artists section -->
+  <h2 class="section-title">Artists</h2>
+  <div class="filter-bar">
+    <label>Filter by Style
+      <select id="artist-style-filter">
+        <option value="">All Styles</option>
+      </select>
+    </label>
+    <label style="justify-content:flex-end">
+      <button class="btn btn-primary" onclick="loadArtists(1)">Apply</button>
+    </label>
+  </div>
+  <div id="artist-grid" class="artist-grid"></div>
+  <div class="pagination" id="artist-pagination"></div>
+
+  <!-- Charts -->
+  <h2 class="section-title">Gallery Insights</h2>
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Artwork by Style</h3>
+      <canvas id="chart-style"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Availability</h3>
+      <canvas id="chart-sold"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Artwork Added by Year</h3>
+      <canvas id="chart-year"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Price Distribution</h3>
+      <canvas id="chart-price"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/user.js"></script>
+</body>
+</html>
