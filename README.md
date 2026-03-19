@@ -62,7 +62,7 @@ Full CRUD management for all entities (Artwork, Artists, Customers, Staff) in a 
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/DarwinWhite/csce_608_art_gallery_management_system.git
 cd csce608_project
 ```
 
